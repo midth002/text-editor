@@ -12,7 +12,8 @@ module.exports = () => {
     mode: 'development',
     entry: {
       main: './src/js/index.js',
-      install: './src/js/install.js'
+      install: './src/js/install.js',
+      database: './src/js/database.js'
     },
     output: {
       filename: '[name].bundle.js',
@@ -21,7 +22,7 @@ module.exports = () => {
     plugins: [
       new HtmlWebpackPlugin({
         template: './index.html',
-        title: 'Text Editor'
+        title: 'JATE Text Editor'
       }), 
 
       new InjectManifest({
@@ -30,17 +31,23 @@ module.exports = () => {
       }), 
 
       new WebpackPwaManifest({
-        fingerprints: false, 
-        inject: true, 
-        name: 'Text Editor',
-        short_name: 'Editor',
+        name: 'JATE - Text Editor',
+        short_name: 'JATE',
         description: 'Simple text editor application',
-        background_color: '#225ca3',
-        theme_color: '#225ca3',
+        background_color: '#ffffff',
         start_url: '/',
-        publicPath: '/'
+        publicPath: '/', 
+        icons : [
+          {
+            src: path.resolve('src/images/logo.png'), 
+            sizes: [96, 128, 192, 256, 384, 512],
+            destination: path.join("assets", "icons"),
+          }
+        ]
       })
     ],
+
+    devtool: 'source-map',
 
     module: {
       rules: [
