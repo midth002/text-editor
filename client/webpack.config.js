@@ -31,6 +31,8 @@ module.exports = () => {
       }), 
 
       new WebpackPwaManifest({
+        fingerprints: false, 
+        inject: true,
         name: 'JATE - Text Editor',
         short_name: 'JATE',
         description: 'Simple text editor application',
@@ -41,13 +43,12 @@ module.exports = () => {
           {
             src: path.resolve('src/images/logo.png'), 
             sizes: [96, 128, 192, 256, 384, 512],
-            destination: path.join("assets", "icons"),
+            destination: path.join('assets', 'icons'),
           }
         ]
       })
     ],
 
-    devtool: 'source-map',
 
     module: {
       rules: [
