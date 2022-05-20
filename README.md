@@ -2,7 +2,7 @@
 
    [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-   [Text-Editor-Live-Link]()
+   [Text-Editor-Live-Link](https://morning-brushlands-69396.herokuapp.com/)
   
   ## Table of Contents 
 
@@ -25,6 +25,8 @@
   This project is a web baded text editor that will auto save a user's inputs. The data is saved through the indexedDB which is stored on the client side. This editor is a PWA (progressive web application), using webpack and webpack manifest to use the application offline and have the already saved text saved.
 
   ## Screenshot
+
+  ![Screenshot](./images/screenshot.png)
   
   ## Installation 
 
